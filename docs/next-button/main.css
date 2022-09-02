@@ -230,3 +230,18 @@
 .perspective .spectrum-Button:active {
   transform: perspective(1000px) translateZ(-50px);
 }
+
+:root {
+  --spectrum-button-active-scale-size: 2px;
+}
+
+.padding .spectrum-Button {
+  transition: all var(--spectrum-global-animation-duration-50) var(--spectrum-global-animation-ease-out);
+}
+
+.padding .spectrum-Button:active {
+  min-height: calc(var(--spectrum-button-primary-fill-textonly-height) - 2 * var(--spectrum-button-active-scale-size));
+  height: calc(var(--spectrum-button-primary-fill-textonly-height) - 2 * var(--spectrum-button-active-scale-size));
+  padding: 0 calc(var(--spectrum-button-primary-fill-textonly-padding-left-adjusted) - var(--spectrum-button-active-scale-size));
+  margin: var(--spectrum-button-active-scale-size);
+}
