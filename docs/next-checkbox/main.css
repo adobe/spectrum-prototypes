@@ -1,0 +1,89 @@
+.spectrum--light {
+  --spectrum-global-color-gray-50: #FFFFFF;
+  --spectrum-global-color-gray-75: #F9F9F9;
+  --spectrum-global-color-gray-100: #F1F1F1;
+  --spectrum-global-color-gray-200: #E6E6E6;
+  --spectrum-global-color-gray-300: #D5D5D5;
+  --spectrum-global-color-gray-400: #B1B1B1;
+  --spectrum-global-color-gray-500: #909090;
+  --spectrum-global-color-gray-600: #6D6D6D;
+  --spectrum-global-color-gray-700: #464646;
+  --spectrum-global-color-gray-800: #222222;
+  --spectrum-global-color-gray-900: #000000;
+}
+
+.spectrum--dark {
+  --spectrum-global-color-gray-50: #101010;
+  --spectrum-global-color-gray-75: #1b1b1b;
+  --spectrum-global-color-gray-100: #292929;
+  --spectrum-global-color-gray-200: #3b3b3b;
+  --spectrum-global-color-gray-300: #4f4f4f;
+  --spectrum-global-color-gray-400: #6c6c6c;
+  --spectrum-global-color-gray-500: #8e8e8e;
+  --spectrum-global-color-gray-600: #b1b1b1;
+  --spectrum-global-color-gray-700: #d1d1d1;
+  --spectrum-global-color-gray-800: #ebebeb;
+  --spectrum-global-color-gray-900: #ffffff;
+}
+
+:root {
+  --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-50);
+  --spectrum-alias-workflow-icon-size-m: 20px;
+  --spectrum-global-animation-duration-50: 80ms;
+  --spectrum-active-scale: 0.90;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.viewport {
+  margin: 50px 100px;
+  display: flex;
+  gap: 100px;
+}
+
+.spectrum--light .inverted, .spectrum--dark .inverted, .spectrum--light .non-inverted {
+
+}
+
+.spectrum--dark .non-inverted {
+
+}
+
+.current {
+
+}
+
+.no-down-color-change {
+
+}
+
+.scale .spectrum-Checkbox-box:before {
+  transition: transform var(--spectrum-global-animation-duration-50) var(--spectrum-global-animation-ease-out), border var(--spectrum-global-animation-duration-100, 130ms) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100, 130ms) ease-in-out;
+}
+
+.ninetyfive {
+  --spectrum-active-scale: 0.95;
+}
+
+.ninety {
+  --spectrum-active-scale: 0.92;
+}
+
+.scale .spectrum-Checkbox:active .spectrum-Checkbox-box:before {
+  transform: scale(var(--spectrum-active-scale));
+}
+
+/* .scale3d .spectrum-Button:active {
+  transform: scale3d(var(--spectrum-active-scale), var(--spectrum-active-scale), var(--spectrum-active-scale));
+}
+.perspective .spectrum-Button {
+  perspective-origin: top;
+}
+.perspective .spectrum-Button:active {
+  transform: perspective(1000px) translateZ(-50px);
+} */
