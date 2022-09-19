@@ -1,0 +1,7 @@
+:root {
+  --spectrum-global-animation-duration-50: 80ms;
+}
+
+.spectrum-Checkbox-box:before {
+  transition: transform var(--spectrum-global-animation-duration-50) var(--spectrum-global-animation-ease-out), border var(--spectrum-global-animation-duration-100, 130ms) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100, 130ms) ease-in-out;
+}

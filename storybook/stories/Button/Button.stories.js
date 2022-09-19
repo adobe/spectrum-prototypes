@@ -1,0 +1,109 @@
+import { createButton } from "./Button";
+
+// More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
+export default {
+  title: "Button",
+  // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
+  argTypes: {
+    scaleMultiplier: {
+      name: "active scale multiplier",
+      defaultValue: 95,
+      control: { type: "range", min: 80, max: 98 },
+    },
+    label: { control: "text" },
+    hideLabel: { name: "hide label", control: "text" },
+    icon: { control: "text" },
+    variant: {
+      options: ["accent", "primary", "secondary", "negative"],
+      defaultValue: "accent",
+      control: {
+        type: "select",
+        labels: {
+          accent: "call to action",
+          primary: "primary",
+          secondary: "secondary",
+          negative: "negative",
+        },
+      },
+    },
+    staticColor: {
+      name: "static color",
+      options: [false, "staticWhite", "staticBlack"],
+      defaultValue: false,
+      control: {
+        type: "select",
+        labels: {
+          false: "none",
+          staticWhite: "white",
+          staticBlack: "black",
+        },
+      },
+    },
+    style: {
+      options: ["fill", "outline"],
+      defaultValue: "fill",
+      control: { type: "select" },
+    },
+    size: {
+      control: { type: "select" },
+      options: ["S", "M", "L", "XL"],
+      defaultValue: "M",
+      control: {
+        type: "select",
+        labels: {
+          S: "small",
+          M: "medium",
+          L: "large",
+          XL: "extra-large",
+        },
+      },
+    },
+    isJustified: {
+      name: "is justified",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
+    isPending: {
+      name: "is pending",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
+    isDisabled: {
+      name: "is disabled",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
+    onClick: { action: "onClick" },
+  },
+};
+
+// More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args
+const Template = ({ ...args }) => {
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return createButton({ ...args });
+};
+
+export const Accent = Template.bind({});
+// More on args: https://storybook.js.org/docs/html/writing-stories/args
+Accent.args = {
+  label: "Button",
+};
+
+export const Negative = Template.bind({});
+Negative.args = {
+  label: "Button",
+  variant: "negative",
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  label: "Button",
+  variant: "primary",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: "Button",
+  variant: "secondary",
+};
