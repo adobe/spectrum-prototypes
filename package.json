@@ -1,0 +1,9 @@
+{
+  "name": "spectrum-prototypes",
+  "version": "1.0.0",
+  "description": "Prototyping Spectrum design ideas. ",
+  "repository": "git@git.corp.adobe.com:garthdb/spectrum-prototypes.git",
+  "author": "Garth Braithwaite <garthdb@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false
+}
