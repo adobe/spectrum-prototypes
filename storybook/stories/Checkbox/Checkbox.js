@@ -11,8 +11,6 @@ governing permissions and limitations under the License.
 */
 
 import "@spectrum-css/checkbox/dist/index-vars.css";
-import "@spectrum-css/typography/dist/index-vars.css";
-import "@spectrum-css/icon/dist/index-vars.css";
 import "./Checkbox.css";
 
 

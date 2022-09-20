@@ -5,6 +5,8 @@ import "@spectrum-css/expressvars/dist/spectrum-light.css";
 import "@spectrum-css/expressvars/dist/spectrum-dark.css";
 import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
 import "@spectrum-css/page/dist/index-vars.css";
+import "@spectrum-css/icon/dist/index-vars.css";
+import "@spectrum-css/typography/dist/index-vars.css";
 
 import spectrumCSSIcons from "@spectrum-css/icon/dist/spectrum-css-icons.svg";
 
