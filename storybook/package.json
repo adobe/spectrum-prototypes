@@ -24,6 +24,7 @@
     "@storybook/testing-library": "0.0.13",
     "babel-loader": "^8.2.5",
     "handlebars": "^4.7.7",
+    "loadicons": "^1.0.0",
     "svg-inline-loader": "^0.8.2"
   },
   "dependencies": {
