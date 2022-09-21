@@ -1387,6 +1387,16 @@
   dependencies:
     "@spectrum-css/vars" "^8.0.0"
 
+"@spectrum-css/switch@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/switch/-/switch-2.0.0.tgz#f52e84731fe505014e5975798577a981a1c1dea4"
+  integrity sha512-8TiHYL0Lk44DG/966aEWthnEIIUObigeoY9gWsl6tBRu0j6I7rP3FUROUGSXkKVACNSi06GBphbOGQQwPj1KWQ==
+
+"@spectrum-css/tokens@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-3.0.0.tgz#eed203fc10ac332fd3595ee23a6e9be0169e7d8f"
+  integrity sha512-EJ/Xlc43avTzeXnaH9yzs8m7SkiWy6w9vvQpm2rJ2gDKLJT/FEMNuRCEwDrLOLgGwGFmmqhveR4DsEf+CKrSsA==
+
 "@spectrum-css/typography@^4.0.20":
   version "4.0.20"
   resolved "https://registry.yarnpkg.com/@spectrum-css/typography/-/typography-4.0.20.tgz#30ee34e8313afe0d5b437924f9cc9454deb50061"
