@@ -20,6 +20,17 @@ export default {
       defaultValue: 95,
       control: { type: "range", min: 80, max: 98 },
     },
+    duration: {
+      name: "active duration (ms)",
+      defaultValue: 80,
+      control: { type: "range", min: 50, max: 200 },
+    },
+    ease: {
+      name: "active ease function",
+      defaultValue: "ease-out", 
+      options: ["ease-in-out", "ease-in", "ease-out", "ease-linear"],
+      control: { type: "select" },
+    },
     label: { control: "text" },
     isSelected: {
       name: "is selected",
