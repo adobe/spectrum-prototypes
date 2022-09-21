@@ -18,10 +18,17 @@ import Handlebars from "handlebars";
 
 Handlebars.registerHelper("percentage", (value) => value / 100);
 
-
 export const createCheckbox = Handlebars.compile(
-  `<style>.spectrum-Checkbox:active .spectrum-Checkbox-box {transform: scale({{percentage scaleMultiplier}});}</style>
-  <label class="spectrum-Checkbox spectrum-Checkbox--size{{size}}{{#if isIndeterminate}} is-indeterminate{{/if}}{{#if isEmphasized}} spectrum-Checkbox--emphasized{{/if}}{{#if isError}} is-invalid{{/if}}{{#if isReadOnly}} is-readOnly{{/if}}">
+  `<style>
+.spectrum-Checkbox:active .spectrum-Checkbox-box {
+  transform: scale({{percentage scaleMultiplier}});
+}
+:root {
+  --spectrum-checkbox-active-animation-ease: var(--spectrum-global-animation-{{ease}});
+  --spectrum-checkbox-active-animation-duration: {{duration}}ms;
+}
+</style>
+<label class="spectrum-Checkbox spectrum-Checkbox--size{{size}}{{#if isIndeterminate}} is-indeterminate{{/if}}{{#if isEmphasized}} spectrum-Checkbox--emphasized{{/if}}{{#if isError}} is-invalid{{/if}}{{#if isReadOnly}} is-readOnly{{/if}}">
   <input type="checkbox" class="spectrum-Checkbox-input"{{#if isSelected}} checked{{/if}}{{#if isDisabled}} disabled{{/if}}>
   <span class="spectrum-Checkbox-box">
     <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">

@@ -10,9 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 :root {
-  --spectrum-global-animation-duration-50: 80ms;
+  --spectrum-checkbox-active-animation-duration: 80ms;
+  --spectrum-checkbox-active-animation-ease: var(--spectrum-global-animation-ease-out);
 }
 
-.spectrum-Checkbox-box:before {
-  transition: transform var(--spectrum-global-animation-duration-50) var(--spectrum-global-animation-ease-out), border var(--spectrum-global-animation-duration-100, 130ms) ease-in-out, box-shadow var(--spectrum-global-animation-duration-100, 130ms) ease-in-out;
+.spectrum-Checkbox-box {
+  transition: transform var(--spectrum-checkbox-active-animation-duration) var(--spectrum-checkbox-active-animation-ease);
 }
