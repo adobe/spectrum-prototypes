@@ -22,6 +22,17 @@ export default {
       defaultValue: 95,
       control: { type: "range", min: 80, max: 98 },
     },
+    duration: {
+      name: "active duration (ms)",
+      defaultValue: 80,
+      control: { type: "range", min: 50, max: 200 },
+    },
+    ease: {
+      name: "active ease function",
+      defaultValue: "ease-out",
+      options: ["ease-in-out", "ease-in", "ease-out", "ease-linear"],
+      control: { type: "select" },
+    },
     label: { control: "text" },
     hideLabel: { name: "hide label", control: "text" },
     icon: { control: "text" },
@@ -96,26 +107,8 @@ const Template = ({ ...args }) => {
   return createButton({ ...args });
 };
 
-export const Accent = Template.bind({});
-// More on args: https://storybook.js.org/docs/html/writing-stories/args
-Accent.args = {
-  label: "Button",
-};
-
-export const Negative = Template.bind({});
-Negative.args = {
-  label: "Button",
-  variant: "negative",
-};
-
 export const Primary = Template.bind({});
 Primary.args = {
   label: "Button",
   variant: "primary",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-  variant: "secondary",
 };

@@ -174,8 +174,22 @@ governing permissions and limitations under the License.
     --spectrum-global-color-gray-800
   );
 }
-
-.spectrum-Button {
-  transition: transform var(--spectrum-global-animation-duration-50)
-    var(--spectrum-global-animation-ease-out);
+:root {
+  --spectrum-button-active-animation-ease: var(
+    --spectrum-global-animation-ease-out
+  );
+  --spectrum-button-active-animation-duration: 80ms;
+  --spectrum-button-active-scale-multiplier: 0.95;
+}
+[dir="ltr"] .spectrum-Button {
+  transition: background var(--spectrum-global-animation-duration-100, 130ms)
+      ease-out,
+    border-color var(--spectrum-global-animation-duration-100, 130ms) ease-out,
+    color var(--spectrum-global-animation-duration-100, 130ms) ease-out,
+    box-shadow var(--spectrum-global-animation-duration-100, 130ms) ease-out,
+    transform var(--spectrum-button-active-animation-duration)
+      var(--spectrum-button-active-animation-ease);
+}
+.spectrum-Button:active {
+  transform: scale(var(--spectrum-button-active-scale-multiplier));
 }
