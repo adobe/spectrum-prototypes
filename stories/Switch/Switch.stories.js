@@ -17,7 +17,7 @@ export default {
   argTypes: {
     scaleMultiplier: {
       name: "active scale multiplier",
-      defaultValue: 95,
+      defaultValue: 50,
       control: { type: "range", min: 80, max: 98 },
     },
     duration: {
