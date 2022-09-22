@@ -38,7 +38,6 @@ export default {
       type: { name: "boolean" },
     },
     size: {
-      control: { type: "select" },
       options: ["S", "M", "L", "XL"],
       defaultValue: "M",
       control: {

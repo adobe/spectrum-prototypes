@@ -68,7 +68,6 @@ export default {
       control: { type: "select" },
     },
     size: {
-      control: { type: "select" },
       options: ["S", "M", "L", "XL"],
       defaultValue: "M",
       control: {
