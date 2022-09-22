@@ -44,4 +44,15 @@
 }
 .spectrum-Switch:active .spectrum-Switch-switch:before {
   transform: scale(var(--spectrum-switch-active-scale-multiplier));
+  transition: background
+      var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
+      ease-in-out,
+    border
+      var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
+      ease-in-out,
+    transform var(--spectrum-switch-active-animation-duration)
+      var(--spectrum-switch-active-animation-ease),
+    box-shadow
+      var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))
+      ease-in-out;
 }
