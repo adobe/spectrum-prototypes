@@ -1,0 +1,8 @@
+.spectrum-Swatch {
+  transition: transform var(--spectrum-Swatch-active-animation-duration)
+    var(--spectrum-Swatch-active-animation-ease);
+}
+
+.spectrum-Swatch:active {
+  transform: scale(var(--spectrum-Swatch-active-scale-multiplier));
+}
