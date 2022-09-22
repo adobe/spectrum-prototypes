@@ -7,16 +7,27 @@ import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
 import "@spectrum-css/page/dist/index-vars.css";
 import "@spectrum-css/icon/dist/index-vars.css";
 import "@spectrum-css/typography/dist/index-vars.css";
-import "@adobe/focus-ring-polyfill"
+import "@adobe/focus-ring-polyfill";
 
-import spectrumCSSIcons from "@spectrum-css/icon/dist/spectrum-css-icons.svg";
+import UIIcons from "@spectrum-css/icon/dist/spectrum-css-icons.svg";
+import workflowIcons from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg";
 
 const parser = new DOMParser();
-const doc = parser.parseFromString(spectrumCSSIcons, 'image/svg+xml');
-const svg = doc.firstChild;
-if (svg && svg.tagName === 'svg') {
-  svg.style.display = 'none';
-  document.head.insertBefore(svg, null);
+const UIIconsElement = parser.parseFromString(
+  UIIcons,
+  "image/svg+xml"
+).firstChild;
+if (UIIconsElement && UIIconsElement.tagName === "svg") {
+  UIIconsElement.style.display = "none";
+  document.head.insertBefore(UIIconsElement, null);
+}
+const workflowIconsElement = parser.parseFromString(
+  workflowIcons,
+  "image/svg+xml"
+).firstChild;
+if (workflowIconsElement && workflowIconsElement.tagName === "svg") {
+  workflowIconsElement.style.display = "none";
+  document.head.insertBefore(workflowIconsElement, null);
 }
 
 export const parameters = {
@@ -27,4 +38,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};

@@ -1,0 +1,13 @@
+.spectrum-ActionButton {
+  transition: border-color
+      var(
+        --mod-actionbutton-animation-duration,
+        var(--spectrum-actionbutton-animation-duration)
+      )
+      ease-in-out,
+    transform var(--spectrum-ActionButton-active-animation-duration)
+      var(--spectrum-ActionButton-active-animation-ease);
+}
+.spectrum-ActionButton:active {
+  transform: scale(var(--spectrum-ActionButton-active-scale-multiplier));
+}

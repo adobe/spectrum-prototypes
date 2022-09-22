@@ -20,7 +20,7 @@ export default {
     scaleMultiplier: {
       name: "active scale multiplier",
       defaultValue: 95,
-      control: { type: "range", min: 80, max: 98 },
+      control: { type: "range", min: 70, max: 98 },
     },
     duration: {
       name: "active duration (ms)",
