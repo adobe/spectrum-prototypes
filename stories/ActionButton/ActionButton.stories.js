@@ -10,14 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { createSwitch } from "./Switch";
+import { createActionButton } from "./ActionButton";
 
 export default {
-  title: "Switch",
+  title: "Action Button",
   argTypes: {
     scaleMultiplier: {
       name: "active scale multiplier",
-      defaultValue: 70,
+      defaultValue: 80,
       control: { type: "range", min: 70, max: 98 },
     },
     duration: {
@@ -32,8 +32,13 @@ export default {
       control: { type: "select" },
     },
     label: { control: "text" },
-    isSelected: {
-      name: "is selected",
+    hideLabel: {
+      name: "hide label",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
+    icon: {
+      name: "show icon",
       defaultValue: false,
       type: { name: "boolean" },
     },
@@ -51,8 +56,39 @@ export default {
         },
       },
     },
+    isQuiet: {
+      name: "is quiet",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
+    isSelected: {
+      name: "is selected",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
     isEmphasized: {
       name: "is emphasized",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
+    staticColor: {
+      name: "static color",
+      options: [false, "staticWhite", "staticBlack"],
+      defaultValue: false,
+      control: {
+        type: "select",
+        labels: {
+          false: "none",
+          staticWhite: "white",
+          staticBlack: "black",
+        },
+      },
+    },
+    selectedTextColor: {
+      name: "selected text color",
+    },
+    hasHoldIcon: {
+      name: "has hold icon",
       defaultValue: false,
       type: { name: "boolean" },
     },
@@ -61,19 +97,17 @@ export default {
       defaultValue: false,
       type: { name: "boolean" },
     },
-    isReadOnly: {
-      name: "is read-only",
-      defaultValue: false,
-      type: { name: "boolean" },
-    },
   },
 };
 
+// More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args
 const Template = ({ ...args }) => {
-  return createSwitch({ ...args });
+  // You can either use a function to create DOM elements or use a plain html string!
+  // return `<div>${label}</div>`;
+  return createActionButton({ ...args });
 };
 
 export const Standard = Template.bind({});
 Standard.args = {
-  label: "Switch",
+  label: "Action",
 };
