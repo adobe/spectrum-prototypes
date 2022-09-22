@@ -16,6 +16,14 @@ import "./Checkbox.css";
 import Handlebars from "handlebars";
 
 Handlebars.registerHelper("percentage", (value) => value / 100);
+Handlebars.registerHelper("mapUIIconSize", (value) => {
+  const map = { XS: 75, S: 75, M: 100, L: 200, XL: 300 };
+  if (map.hasOwnProperty(value)) {
+    return map[value];
+  } else {
+    return 100;
+  }
+});
 
 export const createCheckbox = Handlebars.compile(
   `<style>
@@ -30,11 +38,11 @@ export const createCheckbox = Handlebars.compile(
 <label class="spectrum-Checkbox spectrum-Checkbox--size{{size}}{{#if isIndeterminate}} is-indeterminate{{/if}}{{#if isEmphasized}} spectrum-Checkbox--emphasized{{/if}}{{#if isError}} is-invalid{{/if}}{{#if isReadOnly}} is-readOnly{{/if}}">
   <input type="checkbox" class="spectrum-Checkbox-input"{{#if isSelected}} checked{{/if}}{{#if isDisabled}} disabled{{/if}}>
   <span class="spectrum-Checkbox-box">
-    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark{{mapUIIconSize size}} spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-Checkmark{{mapUIIconSize size}}" />
     </svg>
-    <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
-      <use xlink:href="#spectrum-css-icon-Dash100" />
+    <svg class="spectrum-Icon spectrum-UIIcon-Dash{{mapUIIconSize size}} spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-Dash{{mapUIIconSize size}}" />
     </svg>
   </span>
   <span class="spectrum-Checkbox-label">{{label}}</span>
