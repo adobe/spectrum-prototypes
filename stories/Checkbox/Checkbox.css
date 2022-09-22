@@ -11,9 +11,12 @@ governing permissions and limitations under the License.
 */
 :root {
   --spectrum-checkbox-active-animation-duration: 80ms;
-  --spectrum-checkbox-active-animation-ease: var(--spectrum-global-animation-ease-out);
+  --spectrum-checkbox-active-animation-ease: var(
+    --spectrum-global-animation-ease-out
+  );
 }
 
 .spectrum-Checkbox-box {
-  transition: transform var(--spectrum-checkbox-active-animation-duration) var(--spectrum-checkbox-active-animation-ease);
+  transition: transform var(--spectrum-checkbox-active-animation-duration)
+    var(--spectrum-checkbox-active-animation-ease);
 }

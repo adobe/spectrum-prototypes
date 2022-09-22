@@ -10,14 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 .spectrum--light {
-  --spectrum-global-color-gray-50: #FFFFFF;
-  --spectrum-global-color-gray-75: #F9F9F9;
-  --spectrum-global-color-gray-100: #F1F1F1;
-  --spectrum-global-color-gray-200: #E6E6E6;
-  --spectrum-global-color-gray-300: #D5D5D5;
-  --spectrum-global-color-gray-400: #B1B1B1;
+  --spectrum-global-color-gray-50: #ffffff;
+  --spectrum-global-color-gray-75: #f9f9f9;
+  --spectrum-global-color-gray-100: #f1f1f1;
+  --spectrum-global-color-gray-200: #e6e6e6;
+  --spectrum-global-color-gray-300: #d5d5d5;
+  --spectrum-global-color-gray-400: #b1b1b1;
   --spectrum-global-color-gray-500: #909090;
-  --spectrum-global-color-gray-600: #6D6D6D;
+  --spectrum-global-color-gray-600: #6d6d6d;
   --spectrum-global-color-gray-700: #464646;
   --spectrum-global-color-gray-800: #222222;
   --spectrum-global-color-gray-900: #000000;
@@ -38,57 +38,144 @@ governing permissions and limitations under the License.
 }
 
 :root {
-  --spectrum-alias-background-color-default: var(--spectrum-global-color-gray-50);
+  --spectrum-alias-background-color-default: var(
+    --spectrum-global-color-gray-50
+  );
   --spectrum-alias-workflow-icon-size-m: 20px;
   --spectrum-global-animation-duration-50: 80ms;
 
-  --spectrum-button-m-primary-fill-texticon-background-color: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-primary-fill-texticon-text-color: var(--spectrum-global-color-gray-50);
-  --spectrum-button-m-primary-fill-texticon-icon-color: var(--spectrum-global-color-gray-50);
-  --spectrum-button-m-primary-fill-texticon-background-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-fill-texticon-text-color-hover: var(--spectrum-global-color-gray-50);
-  --spectrum-button-m-primary-fill-texticon-icon-color-hover: var(--spectrum-global-color-gray-50);
-  --spectrum-button-m-primary-fill-texticon-background-color-down: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-fill-texticon-text-color-down: var(--spectrum-global-color-gray-50);
-  --spectrum-button-m-primary-fill-texticon-icon-color-down: var(--spectrum-global-color-gray-50);
+  --spectrum-button-m-primary-fill-texticon-background-color: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-primary-fill-texticon-text-color: var(
+    --spectrum-global-color-gray-50
+  );
+  --spectrum-button-m-primary-fill-texticon-icon-color: var(
+    --spectrum-global-color-gray-50
+  );
+  --spectrum-button-m-primary-fill-texticon-background-color-hover: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-fill-texticon-text-color-hover: var(
+    --spectrum-global-color-gray-50
+  );
+  --spectrum-button-m-primary-fill-texticon-icon-color-hover: var(
+    --spectrum-global-color-gray-50
+  );
+  --spectrum-button-m-primary-fill-texticon-background-color-down: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-fill-texticon-text-color-down: var(
+    --spectrum-global-color-gray-50
+  );
+  --spectrum-button-m-primary-fill-texticon-icon-color-down: var(
+    --spectrum-global-color-gray-50
+  );
 
-  --spectrum-button-m-secondary-fill-texticon-background-color: var(--spectrum-global-color-gray-200);
-  --spectrum-button-m-secondary-fill-texticon-text-color: var(--spectrum-global-color-gray-700);
-  --spectrum-button-m-secondary-fill-texticon-icon-color: var(--spectrum-global-color-gray-700);
-  --spectrum-button-m-secondary-fill-texticon-background-color-hover: var(--spectrum-global-color-gray-300);
-  --spectrum-button-m-secondary-fill-texticon-text-color-hover: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-secondary-fill-texticon-icon-color-hover: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-secondary-fill-texticon-background-color-down: var(--spectrum-global-color-gray-300);
-  --spectrum-button-m-secondary-fill-texticon-text-color-down: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-secondary-fill-texticon-icon-color-down: var(--spectrum-global-color-gray-800);
+  --spectrum-button-m-secondary-fill-texticon-background-color: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-button-m-secondary-fill-texticon-text-color: var(
+    --spectrum-global-color-gray-700
+  );
+  --spectrum-button-m-secondary-fill-texticon-icon-color: var(
+    --spectrum-global-color-gray-700
+  );
+  --spectrum-button-m-secondary-fill-texticon-background-color-hover: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-button-m-secondary-fill-texticon-text-color-hover: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-secondary-fill-texticon-icon-color-hover: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-secondary-fill-texticon-background-color-down: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-button-m-secondary-fill-texticon-text-color-down: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-secondary-fill-texticon-icon-color-down: var(
+    --spectrum-global-color-gray-800
+  );
 
-  --spectrum-button-m-primary-outline-texticon-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-button-m-primary-outline-texticon-border-color: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-primary-outline-texticon-text-color: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-primary-outline-texticon-icon-color: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-primary-outline-texticon-background-color-hover: var(--spectrum-global-color-gray-200);
-  --spectrum-button-m-primary-outline-texticon-border-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-outline-texticon-text-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-outline-texticon-icon-color-hover: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-outline-texticon-background-color-down: var(--spectrum-global-color-gray-200);
-  --spectrum-button-m-primary-outline-texticon-border-color-down: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-outline-texticon-text-color-down: var(--spectrum-global-color-gray-900);
-  --spectrum-button-m-primary-outline-texticon-icon-color-down: var(--spectrum-global-color-gray-900);
+  --spectrum-button-m-primary-outline-texticon-background-color: var(
+    --spectrum-alias-background-color-transparent
+  );
+  --spectrum-button-m-primary-outline-texticon-border-color: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-primary-outline-texticon-text-color: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-primary-outline-texticon-icon-color: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-primary-outline-texticon-background-color-hover: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-button-m-primary-outline-texticon-border-color-hover: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-outline-texticon-text-color-hover: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-outline-texticon-icon-color-hover: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-outline-texticon-background-color-down: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-button-m-primary-outline-texticon-border-color-down: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-outline-texticon-text-color-down: var(
+    --spectrum-global-color-gray-900
+  );
+  --spectrum-button-m-primary-outline-texticon-icon-color-down: var(
+    --spectrum-global-color-gray-900
+  );
 
-  --spectrum-button-m-secondary-outline-texticon-background-color: var(--spectrum-alias-background-color-transparent);
-  --spectrum-button-m-secondary-outline-texticon-border-color: var(--spectrum-global-color-gray-200);
-  --spectrum-button-m-secondary-outline-texticon-text-color: var(--spectrum-global-color-gray-700);
-  --spectrum-button-m-secondary-outline-texticon-icon-color: var(--spectrum-global-color-gray-700);
-  --spectrum-button-m-secondary-outline-texticon-background-color-hover: var(--spectrum-global-color-gray-200);
-  --spectrum-button-m-secondary-outline-texticon-border-color-hover: var(--spectrum-global-color-gray-300);
-  --spectrum-button-m-secondary-outline-texticon-text-color-hover: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-secondary-outline-texticon-icon-color-hover: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-secondary-outline-texticon-background-color-down: var(--spectrum-global-color-gray-200);
-  --spectrum-button-m-secondary-outline-texticon-border-color-down: var(--spectrum-global-color-gray-300);
-  --spectrum-button-m-secondary-outline-texticon-text-color-down: var(--spectrum-global-color-gray-800);
-  --spectrum-button-m-secondary-outline-texticon-icon-color-down: var(--spectrum-global-color-gray-800);
+  --spectrum-button-m-secondary-outline-texticon-background-color: var(
+    --spectrum-alias-background-color-transparent
+  );
+  --spectrum-button-m-secondary-outline-texticon-border-color: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-button-m-secondary-outline-texticon-text-color: var(
+    --spectrum-global-color-gray-700
+  );
+  --spectrum-button-m-secondary-outline-texticon-icon-color: var(
+    --spectrum-global-color-gray-700
+  );
+  --spectrum-button-m-secondary-outline-texticon-background-color-hover: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-button-m-secondary-outline-texticon-border-color-hover: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-button-m-secondary-outline-texticon-text-color-hover: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-secondary-outline-texticon-icon-color-hover: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-secondary-outline-texticon-background-color-down: var(
+    --spectrum-global-color-gray-200
+  );
+  --spectrum-button-m-secondary-outline-texticon-border-color-down: var(
+    --spectrum-global-color-gray-300
+  );
+  --spectrum-button-m-secondary-outline-texticon-text-color-down: var(
+    --spectrum-global-color-gray-800
+  );
+  --spectrum-button-m-secondary-outline-texticon-icon-color-down: var(
+    --spectrum-global-color-gray-800
+  );
 }
 
 .spectrum-Button {
-  transition: transform var(--spectrum-global-animation-duration-50) var(--spectrum-global-animation-ease-out);
+  transition: transform var(--spectrum-global-animation-duration-50)
+    var(--spectrum-global-animation-ease-out);
 }

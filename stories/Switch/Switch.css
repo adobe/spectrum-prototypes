@@ -1,17 +1,46 @@
 :root {
-  --spectrum-switch-active-animation-ease: var(--spectrum-global-animation-ease-out);
+  --spectrum-switch-active-animation-ease: var(
+    --spectrum-global-animation-ease-out
+  );
   --spectrum-switch-active-animation-duration: 80ms;
   --spectrum-switch-active-scale-multiplier: 0.5;
 }
 
-
-[dir="ltr"] .spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch::before {
-  transform-origin: calc(var(--spectrum-switch-control-width) - (var(--spectrum-switch-control-height) / 2)) center;
-  transform: scale(var(--spectrum-switch-active-scale-multiplier)) translateX(calc(var(--mod-switch-control-width, var(--spectrum-switch-control-width)) - 100%));
+[dir="ltr"]
+  .spectrum-Switch:active
+  .spectrum-Switch-input:checked
+  + .spectrum-Switch-switch::before {
+  transform-origin: calc(
+      var(--spectrum-switch-control-width) -
+        (var(--spectrum-switch-control-height) / 2)
+    )
+    center;
+  transform: scale(var(--spectrum-switch-active-scale-multiplier))
+    translateX(
+      calc(
+        var(--mod-switch-control-width, var(--spectrum-switch-control-width)) -
+          100%
+      )
+    );
 }
-[dir="rtl"] .spectrum-Switch:active .spectrum-Switch-input:checked + .spectrum-Switch-switch::before {
-  transform-origin: calc( ( -1 * var(--spectrum-switch-control-width) ) + ( var(--spectrum-switch-control-height) * 1.5 ) ) center;
-  transform: scale(var(--spectrum-switch-active-scale-multiplier)) translateX(calc(-1 * (var(--mod-switch-control-width, var(--spectrum-switch-control-width)) - 100%)));
+[dir="rtl"]
+  .spectrum-Switch:active
+  .spectrum-Switch-input:checked
+  + .spectrum-Switch-switch::before {
+  transform-origin: calc(
+      (-1 * var(--spectrum-switch-control-width)) +
+        (var(--spectrum-switch-control-height) * 1.5)
+    )
+    center;
+  transform: scale(var(--spectrum-switch-active-scale-multiplier))
+    translateX(
+      calc(
+        -1 * (var(
+                --mod-switch-control-width,
+                var(--spectrum-switch-control-width)
+              ) - 100%)
+      )
+    );
 }
 .spectrum-Switch:active .spectrum-Switch-switch:before {
   transform: scale(var(--spectrum-switch-active-scale-multiplier));
