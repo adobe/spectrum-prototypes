@@ -27,7 +27,7 @@ export default {
     },
     ease: {
       name: "active ease function",
-      defaultValue: "ease-out", 
+      defaultValue: "ease-out",
       options: ["ease-in-out", "ease-in", "ease-out", "ease-linear"],
       control: { type: "select" },
     },

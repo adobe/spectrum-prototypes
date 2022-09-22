@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 import "@spectrum-css/checkbox/dist/index-vars.css";
 import "./Checkbox.css";
 
-
 import Handlebars from "handlebars";
 
 Handlebars.registerHelper("percentage", (value) => value / 100);
