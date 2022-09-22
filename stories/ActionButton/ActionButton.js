@@ -16,7 +16,7 @@ import "./ActionButton.css";
 import Handlebars from "handlebars";
 
 Handlebars.registerHelper("percentage", (value) => value / 100);
-Handlebars.registerHelper("holdIconSize", (value) => {
+Handlebars.registerHelper("mapUIIconSize", (value) => {
   const map = { XS: 75, S: 75, M: 100, L: 200, XL: 300 };
   if (map.hasOwnProperty(value)) {
     return map[value];
@@ -34,7 +34,7 @@ export const createActionButton = Handlebars.compile(
 }
 </style>
 <button class="spectrum-ActionButton spectrum-ActionButton--size{{size}}{{#if isQuiet}} spectrum-ActionButton--quiet{{/if}}{{#if isSelected}} is-selected{{/if}}{{#if isEmphasized}} spectrum-ActionButton--emphasized{{/if}}{{#if staticColor}} spectrum-ActionButton--{{staticColor}}{{/if}}"{{#if isDisabled}} disabled{{/if}}>
-  {{#if hasHoldIcon}}<svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle{{holdIconSize size}} spectrum-ActionButton-hold" focusable="false" aria-hidden="true"><use xlink:href="#spectrum-css-icon-CornerTriangle{{holdIconSize size}}" /></svg>{{/if}}
+  {{#if hasHoldIcon}}<svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle{{mapUIIconSize size}} spectrum-ActionButton-hold" focusable="false" aria-hidden="true"><use xlink:href="#spectrum-css-icon-CornerTriangle{{mapUIIconSize size}}" /></svg>{{/if}}
   {{#if icon}}<svg class="spectrum-Icon spectrum-Icon--size{{size}} spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
     <use xlink:href="#spectrum-icon-18-Edit" />
   </svg>{{/if}}
