@@ -9,11 +9,3 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum-Rating-icon {
-  transition: transform var(--spectrum-Rating-active-animation-duration)
-    var(--spectrum-Rating-active-animation-ease);
-}
-
-.spectrum-Rating-icon:active {
-  transform: scale(var(--spectrum-Rating-active-scale-multiplier));
-}
