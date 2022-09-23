@@ -1912,6 +1912,11 @@
   dependencies:
     "@spectrum-css/vars" "^8.0.0"
 
+"@spectrum-css/rating@^3.0.24":
+  version "3.0.24"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/rating/-/rating-3.0.24.tgz#d6406c0907f9ca8df5c8e2402d237379283b504a"
+  integrity sha512-3jz0fEnhG0+f9K5GobXHQyUyHDJd6fjje3hPDvSZvUp5oi3zTDcq27+v+ZsjNKlOy5xaHvzZejR0uOUyfHcxUQ==
+
 "@spectrum-css/swatch@^1.1.4":
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@spectrum-css/swatch/-/swatch-1.1.4.tgz#dfbc899a7145092e3f7b60c516176e393112f050"

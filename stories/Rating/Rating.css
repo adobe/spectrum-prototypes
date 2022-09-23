@@ -1,0 +1,8 @@
+.spectrum-Rating-icon {
+  transition: transform var(--spectrum-Rating-active-animation-duration)
+    var(--spectrum-Rating-active-animation-ease);
+}
+
+.spectrum-Rating-icon:active {
+  transform: scale(var(--spectrum-Rating-active-scale-multiplier));
+}
