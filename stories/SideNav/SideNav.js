@@ -14,7 +14,14 @@ import "./SideNav.css";
 import Handlebars from "handlebars";
 
 export const createSideNav = Handlebars.compile(`
-<nav>
+<style>
+  :root {
+    --spectrum-SideNav-active-animation-ease: var(--spectrum-global-animation-{{ease}});
+    --spectrum-SideNav-active-animation-duration: {{duration}}ms;
+    --spectrum-SideNav-active-scale-multiplier: {{percentage scaleMultiplier}};
+  }
+</style>
+<nav class="spectrum-Nav">
   <ul class="spectrum-SideNav">
     <li class="spectrum-SideNav-item is-selected">
       <a href="#" class="spectrum-SideNav-itemLink" aria-current="page" onclick="return false;">Section Title 1</a>
