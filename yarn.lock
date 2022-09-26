@@ -1912,6 +1912,11 @@
   dependencies:
     "@spectrum-css/vars" "^8.0.0"
 
+"@spectrum-css/picker@^1.2.12":
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/picker/-/picker-1.2.12.tgz#1d60daabb0b6e09a26b4f2380b80cb1baa3b8bc0"
+  integrity sha512-WdV16JVgdQp3XJ0ymfbbB4A1emXZAX2Z9cqDf+UsaFNg7wOkNrhXl5paj9J7wOdALHU6uJN1EfNRhWMrTZQxGw==
+
 "@spectrum-css/rating@^3.0.24":
   version "3.0.24"
   resolved "https://registry.yarnpkg.com/@spectrum-css/rating/-/rating-3.0.24.tgz#d6406c0907f9ca8df5c8e2402d237379283b504a"

@@ -45,6 +45,7 @@
     "@spectrum-css/icon": "^3.0.23",
     "@spectrum-css/page": "^5.0.11",
     "@spectrum-css/rating": "^3.0.24",
+    "@spectrum-css/picker": "^1.2.12",
     "@spectrum-css/sidenav": "^3.0.24",
     "@spectrum-css/swatch": "^1.1.4",
     "@spectrum-css/switch": "^2.0.0",
