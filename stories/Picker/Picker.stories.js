@@ -52,6 +52,11 @@ export default {
       defaultValue: false,
       type: { name: "boolean" },
     },
+    isQuiet: {
+      name: "is quiet",
+      defaultValue: false,
+      type: { name: "boolean" },
+    },
   },
 };
 // More on component templates: https://storybook.js.org/docs/html/writing-stories/introduction#using-args

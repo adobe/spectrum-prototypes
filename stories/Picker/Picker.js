@@ -53,7 +53,7 @@ export const createPicker = Handlebars.compile(/*HTML*/ `
 </style>
 
 <h4>Picker scale M</h4>
-<button class="spectrum-Picker spectrum-Picker--sizeM {{#if isOpen}} is-open{{/if}}" 
+<button class="spectrum-Picker spectrum-Picker--sizeM {{#if isOpen}} is-open{{/if}} {{#if isQuiet}}  spectrum-Picker--quiet{{/if}}" 
  {{#if isDisabled}} disabled{{/if}} 
   aria-haspopup="listbox" style="width: 240px">
   <span class="spectrum-Picker-label {{#if isPlaceholder}} is-placeholder{{/if}}">{{label}}</span>
