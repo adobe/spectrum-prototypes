@@ -52,8 +52,8 @@ export const createPicker = Handlebars.compile(/*HTML*/ `
   {{/if}} 
 </style>
 
-<h4>Picker scaling effects in size M <a href="https://jira.corp.adobe.com/browse/SDS-12198">SDS-12198</a> </h4>
-<button class="spectrum-Picker spectrum-Picker--sizeM {{#if isOpen}} is-open{{/if}} {{#if isQuiet}}  spectrum-Picker--quiet{{/if}}" 
+<h4>Picker scaling effect <a href="https://jira.corp.adobe.com/browse/SDS-12198">SDS-12198</a> </h4>
+<button class="spectrum-Picker spectrum-Picker--size{{scale}} {{#if isOpen}} is-open{{/if}} {{#if isQuiet}}  spectrum-Picker--quiet{{/if}}" 
  {{#if isDisabled}} disabled{{/if}} 
   aria-haspopup="listbox" style="width: 240px">
   <span class="spectrum-Picker-label {{#if isPlaceholder}} is-placeholder{{/if}}">{{label}}</span>

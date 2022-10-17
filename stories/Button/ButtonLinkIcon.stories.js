@@ -20,6 +20,11 @@ export default {
       defaultValue: 60,
       control: { type: "range", min: 30, max: 300 },
     },
+    movement: {
+      name: "animation position movement (px)",
+      defaultValue: 3,
+      control: { type: "range", min: 0, max: 10 },
+    },
     triggerEvent: {
       name: "trigger event",
       defaultValue: "hover",
@@ -30,6 +35,12 @@ export default {
       name: "active ease function",
       defaultValue: "ease-out",
       options: ["ease-in-out", "ease-in", "ease-out", "ease-linear"],
+      control: { type: "select" },
+    },
+    iconDirection: {
+      name: "icon direction",
+      defaultValue: "45",
+      options: ["45", "90"],
       control: { type: "select" },
     },
     icon: {

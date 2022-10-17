@@ -21,4 +21,12 @@ governing permissions and limitations under the License.
 }
 .spectrum-ActionButton:active {
   transform: scale(var(--spectrum-ActionButton-active-scale-multiplier));
+  /* request to keep background-color same as hover state */
+  background-color: var(
+    --highcontrast-actionbutton-background-color-hover,
+    var(
+      --mod-actionbutton-background-color-hover,
+      var(--spectrum-actionbutton-background-color-hover)
+    )
+  );
 }

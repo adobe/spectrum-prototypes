@@ -17,6 +17,11 @@ import "./Link.css";
 
 import Handlebars from "handlebars";
 
+// adding ifEquals checks
+Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
+  return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+});
+
 export const createLinkIconAnimation = Handlebars.compile(/*HTML*/ ` 
 <style>
   
@@ -36,17 +41,38 @@ export const createLinkIconAnimation = Handlebars.compile(/*HTML*/ `
   .spectrum-Link svg {
       display: inline-block;
       position: absolute;
-      margin-left: 8px;
+
+      {{#ifEquals iconDirection "45"}}
       rotate: -45deg;
-      top: -1px;
+      margin-left: 8px;
+      top: 0px;
+      {{/ifEquals}}
+      
+      {{#ifEquals iconDirection "90"}}
+      rotate: 0deg;
+      margin-left: 5px;
+      vertical-align: bottom;
+      top: 5px;
+      {{/ifEquals}}
+
+
+
       {{#if animateLinkIcon}}
         transition: padding {{duration}}ms {{ease}} 0s, top {{duration}}ms {{ease}} 0s;
       {{/if}}
   }
 
   .spectrum-Link:{{triggerEvent}} svg {
-      top: -3px;
-      padding-left: 3px;
+    {{#ifEquals iconDirection "45"}}
+      top: -{{movement}}px;
+      padding-left: {{movement}}px;
+    {{/ifEquals}}
+
+
+    {{#ifEquals iconDirection "90"}}
+      padding-left: {{movement}}px;
+    {{/ifEquals}}
+
   }
 </style>
 
@@ -57,12 +83,13 @@ export const createLinkIconAnimation = Handlebars.compile(/*HTML*/ `
   <br/>
   <br/>
 
-  <a href="#" onClick="event.preventDefault()" class="spectrum-Link">
+  {{prelinkText}}<a href="#" onClick="event.preventDefault()" class="spectrum-Link">
     
     {{linkText}}<svg class="spectrum-Icon spectrum-UIIcon-{{icon}} spectrum-Icon--sizeM " aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-{{icon}}" />
     </svg>
   </a>
+  {{postlinkText}}
 </div>
 
 <br/>
