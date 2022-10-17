@@ -17,8 +17,8 @@ export default {
   argTypes: {
     scaleMultiplier: {
       name: "active scale multiplier",
-      defaultValue: 95,
-      control: { type: "range", min: 70, max: 98 },
+      defaultValue: 100,
+      control: { type: "range", min: 70, max: 100 },
     },
     duration: {
       name: "active duration (ms)",
@@ -29,6 +29,12 @@ export default {
       name: "active ease function",
       defaultValue: "ease-out",
       options: ["ease-in-out", "ease-in", "ease-out", "ease-linear"],
+      control: { type: "select" },
+    },
+    scale: {
+      name: "scale",
+      defaultValue: "M",
+      options: ["S", "M", "L", "XL"],
       control: { type: "select" },
     },
     animateChevronOnly: {

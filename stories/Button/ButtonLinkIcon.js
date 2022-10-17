@@ -16,6 +16,11 @@ import "@spectrum-css/icon/dist/index-vars.css";
 
 import Handlebars from "handlebars";
 
+// adding ifEquals checks
+Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
+  return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+});
+
 export const createButtonIconAnimation = Handlebars.compile(/*HTML*/ ` 
 <style>
   .spectrum-Button-label {
@@ -34,17 +39,34 @@ export const createButtonIconAnimation = Handlebars.compile(/*HTML*/ `
   .spectrum-Button svg {
       display: inline-block;
       position: absolute;
+
+      {{#ifEquals iconDirection "45"}}
       rotate: -45deg;
-      top: 2px;
+      top: 4px;
       right: -12px;
+      {{/ifEquals}}
+      
+      {{#ifEquals iconDirection "90"}}
+      rotate: 0deg;
+      top: 9px;
+      right: -12px;
+      {{/ifEquals}}
+
+
       {{#if animateButtonIcon}}
         transition: right {{duration}}ms {{ease}} 0s, top {{duration}}ms {{ease}} 0s;
       {{/if}}
   }
 
   .spectrum-Button:{{triggerEvent}} svg {
-      top: -1px;
-      right: -15px;
+    {{#ifEquals iconDirection "45"}}
+      top: calc(4px - {{movement}}px);
+      right: calc(-12px - {{movement}}px);
+    {{/ifEquals}}
+
+    {{#ifEquals iconDirection "90"}}
+      right: calc(-12px - {{movement}}px);
+    {{/ifEquals}}
   }
 
 

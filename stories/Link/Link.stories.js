@@ -16,9 +16,14 @@ export default {
   title: "Link",
   argTypes: {
     duration: {
-      name: "hover animation duration (ms)",
+      name: "animation duration (ms)",
       defaultValue: 60,
       control: { type: "range", min: 30, max: 300 },
+    },
+    movement: {
+      name: "animation position movement (px)",
+      defaultValue: 3,
+      control: { type: "range", min: 0, max: 10 },
     },
     triggerEvent: {
       name: "trigger event",
@@ -30,6 +35,12 @@ export default {
       name: "active ease function",
       defaultValue: "ease-out",
       options: ["ease-in-out", "ease-in", "ease-out", "ease-linear"],
+      control: { type: "select" },
+    },
+    iconDirection: {
+      name: "icon direction",
+      defaultValue: "45",
+      options: ["45", "90"],
       control: { type: "select" },
     },
     icon: {
@@ -56,5 +67,6 @@ export const LinkIcon = Template.bind({});
 // More on args: https://storybook.js.org/docs/html/writing-stories/args
 LinkIcon.args = {
   prelinkText: "For more information, visit the ",
+  postlinkText: "or email us.",
   linkText: "Adobe Help Center",
 };
