@@ -14,7 +14,7 @@ import "./Button.css";
 import "@spectrum-css/button/dist/index-vars.css";
 import Handlebars from "handlebars";
 
-Handlebars.registerHelper("percentage", (value) => value / 100);
+Handlebars.registerHelper("percentage", (value) => value / 1000);
 
 export const createButton = Handlebars.compile(
   `<style>
