@@ -26,11 +26,6 @@ export const createButton = Handlebars.compile(
   --spectrum-button-active-scale-multiplier: {{percentage scaleMultiplier}};
 }
 </style>
-
-
-
-
-
 <button class="spectrum-Button spectrum-Button--{{variant}}{{#if staticColor}} spectrum-Button--{{staticColor}}{{/if}} spectrum-Button--{{style}} spectrum-Button--size{{size}}"{{#if isDisabled}} disabled{{/if}}>
   <span class="spectrum-Button-label">{{label}}</span>
 </button>`
