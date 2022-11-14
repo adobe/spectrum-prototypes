@@ -16,8 +16,8 @@ export default {
   argTypes: {
     scaleMultiplier: {
       name: "active scale multiplier / 1000 (744 = 74.4%)",
-      defaultValue: 1000,
-      control: { type: "range", min: 700, max: 1000 },
+      defaultValue: 100,
+      control: { type: "range", min: 70, max: 100 },
     },
     duration: {
       name: "active duration (ms)",

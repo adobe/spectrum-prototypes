@@ -18,9 +18,9 @@ import "./Picker.css";
 import Handlebars from "handlebars";
 
 Handlebars.registerHelper("percentage", (value) => {
-  console.log(value / 1000);
-  return value / 1000;
+  return value / 100;
 });
+
 Handlebars.registerHelper("mapUIIconSize", (value) => {
   const map = { XS: 75, S: 75, M: 100, L: 200, XL: 300 };
   if (map.hasOwnProperty(value)) {
