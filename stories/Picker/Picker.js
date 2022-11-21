@@ -17,9 +17,9 @@ import "./Picker.css";
 
 import Handlebars from "handlebars";
 
-Handlebars.registerHelper("percentage", (value) => {
-  console.log(value / 1000);
-  return value / 1000;
+Handlebars.registerHelper("setScaleMultiplier", function (options) {
+  const adjustedMultiplier = options.data.root.scaleMultiplier / 1000;
+  return adjustedMultiplier;
 });
 Handlebars.registerHelper("mapUIIconSize", (value) => {
   const map = { XS: 75, S: 75, M: 100, L: 200, XL: 300 };
@@ -46,11 +46,11 @@ export const createPicker = Handlebars.compile(/*HTML*/ `
 
   {{#if animateChevronOnly}}
   .spectrum-Picker:active .spectrum-Picker-transform-box {
-    transform: scale({{percentage scaleMultiplier}});
+    transform: scale({{setScaleMultiplier}});
   }
   {{else}}
   .spectrum-Picker:active {
-    transform: scale({{percentage scaleMultiplier}});
+    transform: scale({{setScaleMultiplier}});
   }
   {{/if}} 
 </style>
