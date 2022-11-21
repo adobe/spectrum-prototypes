@@ -18,7 +18,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
     scaleMultiplier: {
-      name: "active scale multiplier / 1000 (744 = 74.4%)",
+      name: "active scale multiplier / 1000 (744 = 0.744%)",
       defaultValue: 1000,
       control: { type: "range", min: 700, max: 1000 },
     },

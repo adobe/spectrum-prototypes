@@ -14,16 +14,20 @@ import "./Button.css";
 import "@spectrum-css/button/dist/index-vars.css";
 import Handlebars from "handlebars";
 
-Handlebars.registerHelper("percentage", (value) => value / 1000);
+Handlebars.registerHelper("setScaleMultiplier", function (options) {
+  const adjustedMultiplier = options.data.root.scaleMultiplier / 1000;
+  return adjustedMultiplier;
+});
 
 export const createButton = Handlebars.compile(
   `<style>
 :root {
   --spectrum-button-active-animation-ease: var(--spectrum-global-animation-{{ease}});
   --spectrum-button-active-animation-duration: {{duration}}ms;
-  --spectrum-button-active-scale-multiplier: {{percentage scaleMultiplier}};
+  --spectrum-button-active-scale-multiplier: {{setScaleMultiplier}};
 }
 </style>
+
 <button class="spectrum-Button spectrum-Button--{{variant}}{{#if staticColor}} spectrum-Button--{{staticColor}}{{/if}} spectrum-Button--{{style}} spectrum-Button--size{{size}}"{{#if isDisabled}} disabled{{/if}}>
   <span class="spectrum-Button-label">{{label}}</span>
 </button>`
