@@ -15,7 +15,7 @@ import "@spectrum-css/button/dist/index-vars.css";
 import Handlebars from "handlebars";
 
 Handlebars.registerHelper("setScaleMultiplier", function (options) {
-  const adjustedMultiplier = options.data.root.scaleMultiplier / 1000;
+  const adjustedMultiplier = options.data.root.scaleMultiplier / 100;
   return adjustedMultiplier;
 });
 
