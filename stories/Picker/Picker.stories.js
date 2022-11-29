@@ -15,9 +15,9 @@ export default {
   title: "Picker",
   argTypes: {
     scaleMultiplier: {
-      name: "active scale multiplier / 1000 (744 = 0.744%)",
-      defaultValue: 700,
-      control: { type: "range", min: 700, max: 1000 },
+      name: "active scale multiplier / 100 (74.4 = 0.744%)",
+      defaultValue: 70,
+      control: { type: "range", min: 70, max: 100, step: 0.1 },
     },
     duration: {
       name: "active duration (ms)",

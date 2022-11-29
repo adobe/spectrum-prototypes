@@ -18,9 +18,10 @@ import "./Picker.css";
 import Handlebars from "handlebars";
 
 Handlebars.registerHelper("setScaleMultiplier", function (options) {
-  const adjustedMultiplier = options.data.root.scaleMultiplier / 1000;
+  const adjustedMultiplier = options.data.root.scaleMultiplier / 100;
   return adjustedMultiplier;
 });
+
 Handlebars.registerHelper("mapUIIconSize", (value) => {
   const map = { XS: 75, S: 75, M: 100, L: 200, XL: 300 };
   if (map.hasOwnProperty(value)) {
