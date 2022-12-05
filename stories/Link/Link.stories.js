@@ -23,7 +23,7 @@ export default {
     movement: {
       name: "animation position movement (px)",
       defaultValue: 3,
-      control: { type: "range", min: 0, max: 10 },
+      control: { type: "range", min: 0, max: 10, step: 0.1 },
     },
     triggerEvent: {
       name: "trigger event",
